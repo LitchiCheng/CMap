@@ -28,13 +28,11 @@ class CMap
 		map_s *_map_table_ptr;
 };
 
-CMap::CMap(uint16_t map_size) :_map_max_size(map_size), _map_now_index(0)
-{
+CMap::CMap(uint16_t map_size) :_map_max_size(map_size), _map_now_index(0){
 	_map_table_ptr = new map_s[_map_max_size];
 }
 
-CMap::~CMap()
-{
+CMap::~CMap(){
 	delete _map_table_ptr;
 }
 
